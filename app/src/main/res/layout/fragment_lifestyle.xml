@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/headerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lummi_photo___serene_meditation" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#33000000" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lifestyle"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/subtitleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Elevated Simplicity"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Quote Section -->
+            <TextView
+                android:id="@+id/quoteText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="#FAFAFA"
+                android:padding="16dp"
+                android:text="&quot;Yoga is not just a practice, it's a journey of self-discovery. Each breath, each pose is an opportunity to embrace peace and find profound connection with yourself.&quot;"
+                android:textColor="#666666"
+                android:textSize="14sp" />
+
+
+
+
+            <!-- Tadasana -->
+            <Button
+                android:id="@+id/tadasana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFEFEF"
+                android:padding="16dp"
+                android:text="Tadasana">
+
+
+            </Button>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Padhastasana"
+                android:id="@+id/padhastasana">
+
+            </Button>
+
+            <!-- Trikonasana -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FBD7E5"
+                android:padding="16dp"
+                android:text="Vajrasana"
+                android:id="@+id/vajrasana">
+
+            </Button>
+
+
+            <!-- Bhujangasana -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Ushtrasna"
+                android:id="@+id/ushtrasna">
+
+            </Button>
+
+
+            <!-- Shavasana -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Yog Mudrasana"
+                android:id="@+id/yog_mudrasana">
+
+            </Button>
+
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Ardh Tadasana"
+                android:id="@+id/ardh_tadasana">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:id="@+id/shasankasana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Shashankasana" >
+
+            </Button>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:id="@+id/bhujangasana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Bhujangasana" >
+
+            </Button>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Triyak Bhujangasana"
+                android:id="@+id/triyak_bhujangasana">
+
+            </Button>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Shasankasana"
+                android:id="@+id/shasankasana2">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Ardh Tadasana"
+                android:id="@+id/ardh_tadasana2">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Utkatasana"
+                android:id="@+id/utkatasana">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Padhastasana"
+                android:id="@+id/padhastasana2">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Tadasana"
+                android:id="@+id/tadasana2">
+
+            </Button>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#FFFFFF"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#FFF7E0"
+                android:padding="16dp"
+                android:text="Shaktisamvardhanasana"
+                android:id="@+id/shaktisamvardhanasana">
+
+            </Button>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
