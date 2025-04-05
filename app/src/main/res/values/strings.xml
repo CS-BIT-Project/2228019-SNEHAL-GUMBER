@@ -3,7 +3,29 @@
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <item name="navigation" type="id"></item>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
+    <string name="Dhyan_Dharna">Dhyan_Dharna</string>
+    <string name="Naad_yoga">Naad_yoga</string>
+    <string name="Gayatri_Mantra_Chanting">Gayatri_Mantra_Chanting</string>
+    <string name="Bhakti_yoga">Bhakti_yoga</string>
+    <string name="Home">Home</string>
+    <string name="Community">Community</string>
+    <string name="Settings">Settings</string>
+    <string name="Profile">Profile</string>
+    <string name="Donate">Donate</string>
+    <string name="Contact_Us">Contact Us</string>
+    <string name="Shivir">Shivir</string>
+    <string name="back">Back</string>
+    <string name="book_title">The Power of Now</string>
+    <string name="author_name">Eckhart Tolle</string>
+    <string name="book_cover">Book cover</string>
+    <string name="chapter_title">Chapter 3: The Power of Presence</string>
+    <string name="previous">Previous</string>
+    <string name="play_pause">Play or Pause</string>
+    <string name="next">Next</string>
+        <string name="not_logged_in">Not Logged In</string>
+        <string name="not_set">Not Set</string>
+        <string name="not_available">Not Available</string>
+        <string name="name_placeholder">Name: %s</string>
+        <string name="email_placeholder">Email: %s</string>
 </resources>

@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Background -->
+    <path
+        android:fillColor="#4B0082"
+        android:pathData="M0,0h200v200h-200z"/>
+
+    <!-- Mandala layers -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M100,100m-80,0a80,80 0,1 1,160 0a80,80 0,1 1,-160 0"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M100,100m-70,0a70,70 0,1 1,140 0a70,70 0,1 1,-140 0"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M100,100m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FF69B4"
+        android:strokeWidth="2"
+        android:pathData="M100,100m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FF69B4"
+        android:strokeWidth="2"
+        android:pathData="M100,100m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"/>
+
+    <!-- Mandala petals -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M100,20L100,180"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M20,100L180,100"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M37,37L163,163"/>
+
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFD700"
+        android:strokeWidth="2"
+        android:pathData="M37,163L163,37"/>
+
+    <!-- Center flower -->
+    <path
+        android:fillColor="#FF69B4"
+        android:pathData="M100,100m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"/>
+</vector>

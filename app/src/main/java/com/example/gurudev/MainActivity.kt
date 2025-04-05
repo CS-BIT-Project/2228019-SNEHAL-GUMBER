@@ -1,85 +1,71 @@
 package com.example.gurudev
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
+import androidx.fragment.app.Fragment
+import com.example.gurudev.databinding.ActivityMainBinding
+import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var drawerLayout: DrawerLayout
-    private lateinit var navigationView: NavigationView
-    private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
+    private lateinit var toggle: ActionBarDrawerToggle
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Setup Toolbar
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        // Initialize FirebaseApp (Important to prevent crash)
+        FirebaseApp.initializeApp(this)
+
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        drawerLayout = findViewById(R.id.drawer_layout)
+        val navigationView: NavigationView = findViewById(R.id.navigation_view)
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+
         setSupportActionBar(toolbar)
 
-        // Initialize DrawerLayout and NavigationView
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView = findViewById(R.id.navigation) // Make sure ID matches your XML
+        // Set up Drawer Toggle
+        toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_open, R.string.nav_close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
-        // Setup ActionBarDrawerToggle
-        actionBarDrawerToggle = ActionBarDrawerToggle(
-            this,
-            drawerLayout,
-            toolbar,
-            R.string.nav_open,
-            R.string.nav_close
-        )
-        drawerLayout.addDrawerListener(actionBarDrawerToggle)
-        actionBarDrawerToggle.syncState()
-
-        // Enable hamburger icon
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
-
-        // Load default fragment
-        loadFragment(Homefragment())
-
-        // Setup NavigationView item click listener
-        navigationView.setNavigationItemSelectedListener {
-            when (it.itemId) {
-                R.id.Profile -> {
-                    loadFragment(ProfileFragment())
-                }
-                R.id.settings -> {
-                    loadFragment(SettingsFragment())
-                }
-                R.id.home -> {
-                    loadFragment(Homefragment())
-                }
-                else -> {
-                    loadFragment(Homefragment())
-                }
+        // Handle Navigation Item Clicks
+        navigationView.setNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> loadFragment(Homefragment())
+                R.id.nav_community -> loadFragment(CommunityFragment())
+                R.id.nav_settings -> loadFragment(SettingsFragment())
+                R.id.nav_Profile -> loadFragment(ProfileFragment())
+                R.id.nav_contact -> loadFragment(ContactFragment())
+                R.id.nav_shivir -> loadFragment(ShivirFragment())
+                R.id.nav_donate  -> loadFragment(DonateFragment())
             }
-
             drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true
+        // Check if user is logged in, and load the correct fragment
+        if (savedInstanceState == null) {
+            if (firebaseAuth.currentUser != null) {
+                loadFragment(Homefragment()) // If logged in
+            } else {
+                loadFragment(LoginFragment()) // If not logged in
+            }
         }
-        return super.onOptionsItemSelected(item)
     }
 
     private fun loadFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
-        transaction.commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .commit()
     }
-
 }

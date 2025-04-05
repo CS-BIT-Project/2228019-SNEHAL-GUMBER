@@ -5,19 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [yoga.newInstance] factory method to
- * create an instance of this fragment.
- */
-class yoga : Fragment() {
-
+class Yoga : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,16 +17,38 @@ class yoga : Fragment() {
         return inflater.inflate(R.layout.yoga, container, false)
     }
 
-    companion object {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            yoga().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        // Set up button click listeners
+        view.findViewById<Button>(R.id.pragya_yog).setOnClickListener {
+            // Navigate to YogaView
+            val yogaViewFragment = YogaView()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, yogaViewFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+        view.findViewById<Button>(R.id.btn_naad_yoga).setOnClickListener {
+            val naadYogaFragment = naadYogaFragment()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, naadYogaFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+        view.findViewById<Button>(R.id.btnmantra).setOnClickListener {
+            val  gayatri_mantra_chanting = gayatri_mantra_chanting()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, gayatri_mantra_chanting)
+                .addToBackStack(null)
+                .commit()
+        }
+        view.findViewById<Button>(R.id.btndhyan).setOnClickListener {
+            val  DhyanFragment = DhyanFragment()
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.container, DhyanFragment)
+                .addToBackStack(null)
+                .commit()
+        }
     }
 }

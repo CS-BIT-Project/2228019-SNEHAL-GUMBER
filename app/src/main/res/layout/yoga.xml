@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/lummi_photo___serene_meditation"
+        android:src="@drawable/download__8_"
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
@@ -85,7 +85,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Morning Flow"
+                    android:text="Pragya Yoga"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -104,7 +104,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/btnStartMorning"
+                        android:id="@+id/pragya_yog"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Get Started"
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Evening Restore"
+                    android:text="@string/Dhyan_Dharna"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -144,7 +144,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/btnStartEvening"
+                        android:id="@+id/btndhyan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Get Started"
@@ -164,7 +164,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Power Yoga"
+                    android:text="@string/Naad_yoga"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -182,7 +182,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/btnStartPower"
+                        android:id="@+id/btn_naad_yoga"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Get Started"
@@ -201,7 +201,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Meditation"
+                    android:text="108 times Gayatri Mantra Chanting"
                     android:textColor="#000000"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -220,7 +220,7 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/btnStartMeditation"
+                        android:id="@+id/btnmantra"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Get Started"

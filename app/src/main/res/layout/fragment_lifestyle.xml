@@ -8,8 +8,8 @@
     android:background="@color/white">
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Header Section -->
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
@@ -37,7 +38,7 @@
                     android:background="#33000000" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|start"
                     android:orientation="vertical"
@@ -60,6 +61,37 @@
                         android:text="Elevated Simplicity"
                         android:textColor="@color/white"
                         android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp">
+
+                        <Switch
+                            android:id="@+id/switchGetStarted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:thumbTint="@color/white"
+                            android:trackTint="@color/light_grey" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Enable"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                        <Button
+                            android:id="@+id/btnTestNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Test Notification"
+                            android:layout_gravity="center"
+                            android:padding="10dp"/>
+
+                    </LinearLayout>
                 </LinearLayout>
             </FrameLayout>
 
@@ -69,225 +101,294 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
-                android:background="#FAFAFA"
+                android:background="#BCB9B9"
                 android:padding="16dp"
-                android:text="&quot;Yoga is not just a practice, it's a journey of self-discovery. Each breath, each pose is an opportunity to embrace peace and find profound connection with yourself.&quot;"
-                android:textColor="#666666"
+                android:text="Yoga is not just a practice, it's a journey of self-discovery. Each breath, each pose is an opportunity to embrace peace and find profound connection with yourself."
+                android:textColor="@color/black"
                 android:textSize="14sp" />
 
-
-
-
-            <!-- Tadasana -->
-            <Button
-                android:id="@+id/tadasana"
+            <!-- Card Sections -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFEFEF"
-                android:padding="16dp"
-                android:text="Tadasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-            </Button>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Brahmamuhurta"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Early Morning Awakening – 4:00 AM to 6:00 AM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <Button
+            <!-- Repeat CardView for other sections -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Padhastasana"
-                android:id="@+id/padhastasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-            <!-- Trikonasana -->
-            <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gayatri Upasana and Meditation"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gayatri Mantra Jap – 5:30 AM to 6:30 AM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Additional CardViews for other sections -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FBD7E5"
-                android:padding="16dp"
-                android:text="Vajrasana"
-                android:id="@+id/vajrasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swadhyaya"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <!-- Bhujangasana -->
-            <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self-Study – 6:30 AM to 7:00 AM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Ushtrasna"
-                android:id="@+id/ushtrasna">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Physical Health"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <!-- Shavasana -->
-            <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yoga and Exercise – 7:00 AM to 7:30 AM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Yog Mudrasana"
-                android:id="@+id/yog_mudrasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seva and Selfless Service"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Karma Yoga – 8:00 AM to 9:00 AM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Ardh Tadasana"
-                android:id="@+id/ardh_tadasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:id="@+id/shasankasana"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ethical Work and Livelihood"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Work as Worship – 9:00 AM to 6:00 PM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Shashankasana" >
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:id="@+id/bhujangasana"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sattvic Diet and Mindful Eating"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Simple and Pure Food – 12:00 PM to 1:00 PM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Bhujangasana" >
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TatvaBodh"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self-Reflection – 8:00 PM to 9:00 PM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Triyak Bhujangasana"
-                android:id="@+id/triyak_bhujangasana">
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/white">
 
-            </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Shasankasana"
-                android:id="@+id/shasankasana2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Early Sleep and Rest"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Ardh Tadasana"
-                android:id="@+id/ardh_tadasana2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maintain circadian rhythm – 9:30 PM to 10:00 PM"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Utkatasana"
-                android:id="@+id/utkatasana">
-
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="21dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Padhastasana"
-                android:id="@+id/padhastasana2">
-
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Tadasana"
-                android:id="@+id/tadasana2">
-
-            </Button>
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="#FFFFFF"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:background="#FFF7E0"
-                android:padding="16dp"
-                android:text="Shaktisamvardhanasana"
-                android:id="@+id/shaktisamvardhanasana">
-
-            </Button>
         </LinearLayout>
-
     </ScrollView>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

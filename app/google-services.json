@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "439414448801",
+    "project_id": "gurudev-login",
+    "storage_bucket": "gurudev-login.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439414448801:android:da0f9490ef85a629acc6e0",
+        "android_client_info": {
+          "package_name": "com.example.gurudev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPxw5cafxw_WJuOvqBFnIwrTfb2sMnRxw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

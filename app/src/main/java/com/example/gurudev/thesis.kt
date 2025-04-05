@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
-import com.example.gurudev.R.id.fragment_container
+import com.example.gurudev.R.id.container
 import com.example.gurudev.R.id.thesis
 
 class ThesisFragment : Fragment() {
@@ -32,7 +32,7 @@ class ThesisFragment : Fragment() {
 
     private fun openWebView(url: String) {
         requireActivity().supportFragmentManager.beginTransaction().apply {
-            replace(fragment_container, WebViewFragment.newInstance(url))
+            replace(container, WebViewFragment.newInstance(url))
             addToBackStack(null)  // Allows back navigation
             commit()
         }
