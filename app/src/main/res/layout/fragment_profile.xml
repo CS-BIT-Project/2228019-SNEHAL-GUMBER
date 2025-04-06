@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E6BA5E"
     tools:context=".ProfileFragment">
 
+    <!-- Profile Image -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profileImage"
         android:layout_width="80dp"
@@ -14,36 +16,36 @@
         android:src="@drawable/meditation__1_"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/CircleImageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="#FFFFFF" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- User Name -->
     <TextView
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Sarah Moonlight"
+        android:text="User"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Security Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSecurity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
+        android:layout_margin="24dp"
         app:cardCornerRadius="12dp"
         app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="#EBC588"
+        app:layout_constraintTop_toBottomOf="@id/textViewName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="sarah.moonlight@gmail.com"
+                android:text="user@example.com"
                 android:textColor="#666666"
                 android:textSize="14sp" />
 
@@ -88,6 +90,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/svg__21_" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/password"
                 android:layout_width="match_parent"
@@ -101,16 +104,20 @@
                     android:layout_weight="1"
                     android:text="Old Password"
                     android:textColor="#000000"
-                    android:textSize="14sp"
-                    />
+                    android:textSize="14sp" />
+
                 <TextView
+                    android:id="@+id/textViewpassword"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:hint="******"
+                    android:textColorHint="@color/black"
+                    android:inputType="textPassword"
                     android:textColor="#000000"
-                    android:textSize="14sp"
-                     android:id="@+id/textViewpassword"/>
+                    android:textSize="14sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:id="@+id/newpassword"
                 android:layout_width="match_parent"
@@ -125,31 +132,27 @@
                     android:text="New Password"
                     android:textColor="#000000"
                     android:textSize="14sp" />
+
                 <EditText
+                    android:id="@+id/textViewchangepassword"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="New Password"
+                    android:hint="New Password"
+                    android:inputType="textPassword"
                     android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:id="@+id/textViewchangepassword" />
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/buttonChangepassword"
-                android:layout_width="206dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
-                android:drawablePadding="8dp"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:text="Logout"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                app:layout_constraintTop_toBottomOf="@+id/cardSecurity"
-                tools:layout_editor_absoluteX="104dp" />
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FD6F43"
+                android:text="Change Password"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -163,7 +166,8 @@
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardSecurity">
+        app:layout_constraintTop_toBottomOf="@+id/cardSecurity"
+        android:backgroundTint="#EBC588">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -198,8 +202,8 @@
                         android:id="@+id/facebook"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/svg__25_"
-                        android:backgroundTint="@color/white"/>
+                        android:backgroundTint="#EBC588"
+                        android:src="@drawable/svg__25_" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -220,9 +224,9 @@
 
                     <ImageButton
                         android:id="@+id/instagram"
-                        android:backgroundTint="@color/white"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+                        android:backgroundTint="#EBC588"
                         android:src="@drawable/svg__22_" />
 
                     <TextView
@@ -243,11 +247,11 @@
                     android:orientation="vertical">
 
                     <ImageButton
+                        android:id="@+id/twitter"
                         android:layout_width="32dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/svg__23_"
-                        android:id="@+id/twitter"
-                        android:backgroundTint="@color/white"/>
+                        android:backgroundTint="#EBC588"
+                        android:src="@drawable/svg__23_" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -260,7 +264,7 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
+    <!-- Logout Button -->
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogout"
         android:layout_width="0dp"
@@ -269,16 +273,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:background="@drawable/button_background"
-        android:drawablePadding="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
         android:text="Logout"
-        android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/btnDeleteAccount"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@id/btnDeleteAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Delete Account Text -->
     <TextView
         android:id="@+id/btnDeleteAccount"
         android:layout_width="wrap_content"
@@ -288,9 +290,7 @@
         android:textColor="#FF0000"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
