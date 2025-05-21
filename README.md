@@ -101,7 +101,7 @@ We welcome contributions from all *Sadhaks* and developers.
 
 Developed with devotion in the service of *Gurudev*'s vision.
 
-> "Hum Sudharenge, Yug Sudharenge"  
+> "Hum Sudharenge, Yug Sudharega"  
 (We shall refine ourselves, and the world will be refined.)
 
 8 Developer:
